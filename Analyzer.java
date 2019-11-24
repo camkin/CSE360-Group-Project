@@ -1,10 +1,33 @@
 import java.util.*;
+import java.io.*;
 //import java.lang.*;
 
 public class Analyzer {
     ArrayList<Double> dataSet = new ArrayList<Double>();
     Scanner input = new Scanner(System.in);
 
+    public String readFromFile(ArrayList<Double> data) throws FileNotFoundException {
+        String fileName = input.next();
+
+        if(fileName.substring(fileName.length() - 3, fileName.length() - 1).equals("txt")) {
+            File file = new File(fileName);
+            Scanner infile = new Scanner(file);
+
+            while (infile.hasNextLine()) {
+                Double lines = infile.nextDouble();
+                data.add(lines);
+            }
+            infile.close();
+
+            return "Data appended!";
+        }
+        else if(fileName.substring(fileName.length() - 3, fileName.length() - 1).equals("csv")) {
+            return "Data appended!";
+        }
+        else{
+            return "Invalid file type!";
+        }
+    }
 
     public void addFromKeyboard(ArrayList<Double> data, double lowerBound, int higherBound){
         double value = input.nextDouble();
