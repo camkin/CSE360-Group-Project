@@ -80,4 +80,39 @@ public class Analyzer {
         return arr;
     }
 
+    public int[] distribution(ArrayList<Double> data, double lowerBound, double upperBound){
+        //10 elements array hold the values
+        int[] distArr = new int[10];
+
+        for (double each : data) {
+            if (each >= lowerBound) {
+
+                //# of people in each 10% interval of full score
+                if (each >= 0 * upperBound && each <= 0.09 * upperBound) {
+                    distArr[0]++;
+                } else if (each >= 0.1 * upperBound && each <= 0.19 * upperBound) {
+                    distArr[1]++;
+                } else if (each >= 0.2 * upperBound && each <= 0.29 * upperBound) {
+                    distArr[2]++;
+                } else if (each >= 0.3 * upperBound && each <= 0.39 * upperBound) {
+                    distArr[3]++;
+                } else if (each >= 0.4 * upperBound && each <= 0.49 * upperBound) {
+                    distArr[4]++;
+                } else if (each >= 0.5 * upperBound && each <= 0.59 * upperBound) {
+                    distArr[5]++;
+                } else if (each >= 0.6 * upperBound && each <= 0.69 * upperBound) {
+                    distArr[6]++;
+                } else if (each >= 0.7 * upperBound && each <= 0.79 * upperBound) {
+                    distArr[7]++;
+                } else if (each >= 0.8 * upperBound && each <= 0.89 * upperBound) {
+                    distArr[8]++;
+                } else if (each >= 0.9 * upperBound && each <= upperBound) {
+                    distArr[9]++;
+                }
+            }
+        }
+        
+        return distArr;
+    }
+
 }
