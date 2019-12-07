@@ -171,29 +171,33 @@ public class Main extends Application {
                     return;
                 }
 
-                for (int i = 0; i < chopped_sorted_list.get(0).size(); i++) {
-                    switch (i) {
-                        case 0:
-                            c_tf_1.appendText(String.valueOf(chopped_sorted_list.get(i).get(i).getGrade()));
-                            c_tf_1.appendText("\n");
-                            break;
-                        case 1:
-                            c_tf_2.appendText(String.valueOf(chopped_sorted_list.get(i).get(i).getGrade()));
-                            c_tf_2.appendText("\n");
-                            break;
-                        case 2:
-                            c_tf_3.appendText(String.valueOf(chopped_sorted_list.get(i).get(i).getGrade()));
-                            c_tf_3.appendText("\n");
-                            break;
-                        case 3:
-                            c_tf_4.appendText(String.valueOf(chopped_sorted_list.get(i).get(i).getGrade()));
-                            c_tf_4.appendText("\n");
-                            break;
-                        default:
-                            throw new UnsupportedOperationException("");
+                try{
+                    for (int i = 0; i < chopped_sorted_list.get(0).size(); i++) {
+                        switch (i) {
+                            case 0:
+                                c_tf_1.appendText(String.valueOf(chopped_sorted_list.get(i).get(i).getGrade()));
+                                c_tf_1.appendText("\n");
+                                break;
+                            case 1:
+                                c_tf_2.appendText(String.valueOf(chopped_sorted_list.get(i).get(i).getGrade()));
+                                c_tf_2.appendText("\n");
+                                break;
+                            case 2:
+                                c_tf_3.appendText(String.valueOf(chopped_sorted_list.get(i).get(i).getGrade()));
+                                c_tf_3.appendText("\n");
+                                break;
+                            case 3:
+                                c_tf_4.appendText(String.valueOf(chopped_sorted_list.get(i).get(i).getGrade()));
+                                c_tf_4.appendText("\n");
+                                break;
+                            default:
+                                throw new UnsupportedOperationException("");
+                        }
                     }
-
-
+                }catch (IndexOutOfBoundsException e){
+                    Alert a = new Alert(Alert.AlertType.ERROR);
+                    a.setContentText("Illegal data detected");
+                    a.show();
                 }
 
                 prev_scene = entry_screen_scene;
