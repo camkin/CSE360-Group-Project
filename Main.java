@@ -230,10 +230,14 @@ public class Main extends Application {
             public void handle(MouseEvent mouseEvent) {
                 TextField left_boundary_tf = (TextField) settings_screen_scene.lookup("#grade_left_boundary");
                 TextField right_boundary_tf = (TextField) settings_screen_scene.lookup("#grade_right_boundary");
-
-                Settings.GRADE_LEFT_BOUNDARY = Integer.parseInt(left_boundary_tf.getText());
-                Settings.GRADE_RIGHT_BOUNDARY = Integer.parseInt(right_boundary_tf.getText());
-
+                try {
+                    Settings.GRADE_LEFT_BOUNDARY = Integer.parseInt(left_boundary_tf.getText());
+                    Settings.GRADE_RIGHT_BOUNDARY = Integer.parseInt(right_boundary_tf.getText());
+                }catch (NumberFormatException e){
+                    Alert a = new Alert(Alert.AlertType.ERROR);
+                    a.setContentText("Illegal bound setting");
+                    a.show();
+                }
                 if (prev_scene == entry_screen_scene) {
                     primaryStage.setScene(entry_screen_scene);
                 } else if (prev_scene == data_screen_scene) {
