@@ -172,21 +172,29 @@ public class Main extends Application {
                 }
 
                 try{
-                    for (int i = 0; i < chopped_sorted_list.get(0).size(); i++) {
-                        c_tf_1.appendText(String.valueOf(chopped_sorted_list.get(0).get(i).getGrade()));
-                        c_tf_1.appendText("\n");
-                    }
-                    for (int i = 0; i < chopped_sorted_list.get(1).size(); i++) {
-                        c_tf_2.appendText(String.valueOf(chopped_sorted_list.get(1).get(i).getGrade()));
-                        c_tf_2.appendText("\n");
-                    }
-                    for (int i = 0; i < chopped_sorted_list.get(2).size(); i++) {
-                        c_tf_3.appendText(String.valueOf(chopped_sorted_list.get(2).get(i).getGrade()));
-                        c_tf_3.appendText("\n");
-                    }
-                    for (int i = 0; i < chopped_sorted_list.get(3).size(); i++) {
-                        c_tf_4.appendText(String.valueOf(chopped_sorted_list.get(3).get(i).getGrade()));
-                        c_tf_4.appendText("\n");
+                    for (int i = 0; i < 4; i++){
+                        for (int j = 0; j < chopped_sorted_list.get(0).size(); j++) {
+                            switch (i) {
+                                case 0:
+                                    c_tf_1.appendText(String.valueOf(chopped_sorted_list.get(i).get(j).getGrade()));
+                                    c_tf_1.appendText("\n");
+                                    break;
+                                case 1:
+                                    c_tf_2.appendText(String.valueOf(chopped_sorted_list.get(i).get(j).getGrade()));
+                                    c_tf_2.appendText("\n");
+                                    break;
+                                case 2:
+                                    c_tf_3.appendText(String.valueOf(chopped_sorted_list.get(i).get(j).getGrade()));
+                                    c_tf_3.appendText("\n");
+                                    break;
+                                case 3:
+                                    c_tf_4.appendText(String.valueOf(chopped_sorted_list.get(i).get(j).getGrade()));
+                                    c_tf_4.appendText("\n");
+                                    break;
+                                default:
+                                    throw new UnsupportedOperationException("");
+                            }
+                        }
                     }
                 }catch (IndexOutOfBoundsException e){
                     Alert a = new Alert(Alert.AlertType.ERROR);
@@ -302,25 +310,30 @@ public class Main extends Application {
 
                 ArrayList<ArrayList<Grade>> chopped_sorted_list = chopped(sorted_list, sorted_list.size() / 4);
 
-                for (int i = 0; i < chopped_sorted_list.get(0).size(); i++) {
-                    c_tf_1.appendText(String.valueOf(chopped_sorted_list.get(0).get(i).getGrade()));
-                    c_tf_1.appendText("\n");
+                for (int i = 0; i < 4; i++){
+                    for (int j = 0; j < chopped_sorted_list.get(0).size(); j++) {
+                        switch (i) {
+                            case 0:
+                                c_tf_1.appendText(String.valueOf(chopped_sorted_list.get(i).get(j).getGrade()));
+                                c_tf_1.appendText("\n");
+                                break;
+                            case 1:
+                                c_tf_2.appendText(String.valueOf(chopped_sorted_list.get(i).get(j).getGrade()));
+                                c_tf_2.appendText("\n");
+                                break;
+                            case 2:
+                                c_tf_3.appendText(String.valueOf(chopped_sorted_list.get(i).get(j).getGrade()));
+                                c_tf_3.appendText("\n");
+                                break;
+                            case 3:
+                                c_tf_4.appendText(String.valueOf(chopped_sorted_list.get(i).get(j).getGrade()));
+                                c_tf_4.appendText("\n");
+                                break;
+                            default:
+                                throw new UnsupportedOperationException("");
+                        }
+                    }
                 }
-                for (int i = 0; i < chopped_sorted_list.get(1).size(); i++) {
-                    c_tf_2.appendText(String.valueOf(chopped_sorted_list.get(1).get(i).getGrade()));
-                    c_tf_2.appendText("\n");
-                }
-                for (int i = 0; i < chopped_sorted_list.get(2).size(); i++) {
-                    c_tf_3.appendText(String.valueOf(chopped_sorted_list.get(2).get(i).getGrade()));
-                    c_tf_3.appendText("\n");
-                }
-                for (int i = 0; i < chopped_sorted_list.get(3).size(); i++) {
-                    c_tf_4.appendText(String.valueOf(chopped_sorted_list.get(3).get(i).getGrade()));
-                    c_tf_4.appendText("\n");
-                }
-
-
-
 
                 prev_scene = entry_screen_scene;
                 primaryStage.setScene(data_screen_scene);
@@ -363,26 +376,30 @@ public class Main extends Application {
 
                     ArrayList<ArrayList<Grade>> chopped_sorted_list = chopped(sorted_list, sorted_list.size() / 4);
 
-                    for (int i = 0; i < chopped_sorted_list.get(0).size(); i++) {
-                        c_tf_1.appendText(String.valueOf(chopped_sorted_list.get(0).get(i).getGrade()));
-                        c_tf_1.appendText("\n");
+                    for (int i = 0; i < 4; i++){
+                        for (int j = 0; j < chopped_sorted_list.get(0).size(); j++) {
+                            switch (i) {
+                                case 0:
+                                    c_tf_1.appendText(String.valueOf(chopped_sorted_list.get(i).get(j).getGrade()));
+                                    c_tf_1.appendText("\n");
+                                    break;
+                                case 1:
+                                    c_tf_2.appendText(String.valueOf(chopped_sorted_list.get(i).get(j).getGrade()));
+                                    c_tf_2.appendText("\n");
+                                    break;
+                                case 2:
+                                    c_tf_3.appendText(String.valueOf(chopped_sorted_list.get(i).get(j).getGrade()));
+                                    c_tf_3.appendText("\n");
+                                    break;
+                                case 3:
+                                    c_tf_4.appendText(String.valueOf(chopped_sorted_list.get(i).get(j).getGrade()));
+                                    c_tf_4.appendText("\n");
+                                    break;
+                                default:
+                                    throw new UnsupportedOperationException("");
+                            }
+                        }
                     }
-                    for (int i = 0; i < chopped_sorted_list.get(1).size(); i++) {
-                        c_tf_2.appendText(String.valueOf(chopped_sorted_list.get(1).get(i).getGrade()));
-                        c_tf_2.appendText("\n");
-                    }
-                    for (int i = 0; i < chopped_sorted_list.get(2).size(); i++) {
-                        c_tf_3.appendText(String.valueOf(chopped_sorted_list.get(2).get(i).getGrade()));
-                        c_tf_3.appendText("\n");
-                    }
-                    for (int i = 0; i < chopped_sorted_list.get(3).size(); i++) {
-                        c_tf_4.appendText(String.valueOf(chopped_sorted_list.get(3).get(i).getGrade()));
-                        c_tf_4.appendText("\n");
-                    }
-
-
-
-
                 } catch (NumberFormatException e) {
                     Alert a = new Alert(Alert.AlertType.ERROR);
                     a.setContentText("Incorrect Number Format. Integer or Decimal values expected.");
@@ -432,21 +449,29 @@ public class Main extends Application {
                         ArrayList<ArrayList<Grade>> chopped_sorted_list = chopped(sorted_list, sorted_list.size() / 4);
 
                         try {
-                            for (int i = 0; i < chopped_sorted_list.get(0).size(); i++) {
-                                c_tf_1.appendText(String.valueOf(chopped_sorted_list.get(0).get(i).getGrade()));
-                                c_tf_1.appendText("\n");
-                            }
-                            for (int i = 0; i < chopped_sorted_list.get(1).size(); i++) {
-                                c_tf_2.appendText(String.valueOf(chopped_sorted_list.get(1).get(i).getGrade()));
-                                c_tf_2.appendText("\n");
-                            }
-                            for (int i = 0; i < chopped_sorted_list.get(2).size(); i++) {
-                                c_tf_3.appendText(String.valueOf(chopped_sorted_list.get(2).get(i).getGrade()));
-                                c_tf_3.appendText("\n");
-                            }
-                            for (int i = 0; i < chopped_sorted_list.get(3).size(); i++) {
-                                c_tf_4.appendText(String.valueOf(chopped_sorted_list.get(3).get(i).getGrade()));
-                                c_tf_4.appendText("\n");
+                            for (int i = 0; i < 4; i++){
+                                for (int j = 0; j < chopped_sorted_list.get(0).size(); j++) {
+                                    switch (i) {
+                                        case 0:
+                                            c_tf_1.appendText(String.valueOf(chopped_sorted_list.get(i).get(j).getGrade()));
+                                            c_tf_1.appendText("\n");
+                                            break;
+                                        case 1:
+                                            c_tf_2.appendText(String.valueOf(chopped_sorted_list.get(i).get(j).getGrade()));
+                                            c_tf_2.appendText("\n");
+                                            break;
+                                        case 2:
+                                            c_tf_3.appendText(String.valueOf(chopped_sorted_list.get(i).get(j).getGrade()));
+                                            c_tf_3.appendText("\n");
+                                            break;
+                                        case 3:
+                                            c_tf_4.appendText(String.valueOf(chopped_sorted_list.get(i).get(j).getGrade()));
+                                            c_tf_4.appendText("\n");
+                                            break;
+                                        default:
+                                            throw new UnsupportedOperationException("");
+                                    }
+                                }
                             }
                         } catch (IndexOutOfBoundsException ignored){
 
